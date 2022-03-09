@@ -1075,3 +1075,13 @@ section {
 .skill-detail:hover i{
   color: #fff;
 }
+.btn-primary{
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus{
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}

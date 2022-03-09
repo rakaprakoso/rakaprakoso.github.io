@@ -28,6 +28,7 @@ var main_data = {
   city: "Jepara",
   degree: "Bachelor",
   email: "rakaprakoso2@gmail.com",
+  cv: "assets/file/CV - Raka D Prakoso.pdf",
   skills: ["HTML","CSS","Javascript","PHP","UiPath","NodeJS","CorelDraw","Sony Vegas",],
   education: [
     {
@@ -70,7 +71,7 @@ var main_data = {
       name: "King Smith Walking Pad – Company Profile",
       img: "assets/img/portfolio/portfolio-2.jpg",
       type: "web",
-      url: "#",
+      url: "https://kingsmithwalkingpad.com",
     },
     {
       name: "PUSC – Organization Profile",
@@ -83,6 +84,18 @@ var main_data = {
       img: "assets/img/portfolio/portfolio-4.jpg",
       type: "web",
       url: "https://keinabeauty.com",
+    },
+    {
+      name: "Career Path",
+      img: "assets/img/portfolio/portfolio-5.jpg",
+      type: "mobile-app",
+      url: "https://keinabeauty.com",
+    },
+    {
+      name: "NorthWest",
+      img: "assets/img/portfolio/portfolio-6.jpg",
+      type: "design",
+      url: "#",
     },
   ],
   hobby: [
@@ -128,11 +141,26 @@ var main_data = {
   }
 };
 
-document.title = main_data.title;
-$(".favicon").attr("href","assets/img/logo.png");
 
 var duration = moment.duration(moment().diff(main_data.birthday));
 var years = duration.asYears();
+
+var birth_year = moment(main_data.birthday, 'YYYY-MM-DD').format('YYYY')
+var generation = '';
+if (birth_year>2011) {
+  generation = 'Gen Alpha'
+}else if(birth_year>1994){
+  generation = 'Gen Z'
+}else if(birth_year>1980){
+  generation = 'Gen Y / Milennial'
+}else if(birth_year>1964){
+  generation = 'Gen X'
+}else if(birth_year>1945){
+  generation = 'Baby Boomer'
+}
+
+document.title = main_data.title;
+$(".favicon").attr("href","assets/img/logo.png");
 
 $("#profile__name").html(main_data.name);
 $("#profile__footer__name").html(main_data.name);
@@ -148,11 +176,13 @@ $("#profile__pic").attr("src", main_data.profile_pic);
 $("#profile__about").html(main_data.about);
 $("#profile__birthday").html(moment(main_data.birthday).format("DD MMMM YYYY"));
 $("#profile__age").html(Math.floor(years));
+$("#profile__gen").html(generation);
 $("#profile__website").html(main_data.website);
 $("#profile__phone").html(main_data.phone);
 $("#profile__city").html(main_data.city);
 $("#profile__degree").html(main_data.degree);
 $("#profile__email").html(main_data.email);
+$("#profile__cv").attr("href",main_data.cv);
 
 var skills = "";
 $.each( main_data.skills, function( i, val ) {
@@ -198,6 +228,7 @@ $.each( main_data.hobby, function( i, val ) {
 });
 $("#profile__hobby").html(hobby);
 
+$("#profile__contact__address").html(main_data.contact.address);
 $("#profile__contact__email").html('<a href="mailto:'+main_data.contact.email+'">'+main_data.contact.email+'<a/>');
 $("#profile__contact__phone").html('<a href="tel:'+main_data.contact.phone+'">'+main_data.contact.phone_display+'<a/>');
 $("#profile__contact__wa").html('<a target="_blank" href="https://wa.me/'+main_data.contact.wa+'?text='+main_data.contact.wa_message+'">'+main_data.contact.wa_display+'<a/>');
