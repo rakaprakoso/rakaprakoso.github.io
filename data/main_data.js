@@ -20,7 +20,7 @@ var main_data = {
       url: "https://www.linkedin.com/in/raka-d-p-74b67b122/",
     },
   ],
-  profile_pic: "assets/img/_MG_3926.JPG",
+  profile_pic: "assets/img/IMG_3926.JPG",
   about: "Enthusiasm with full stack developer knowledgeable of backend and frontend development requirements. I am eager to be challenged in order to grow and further improve my skills. My greatest passion is in life is using my technical know-how to benefit other people and organizations.",
   birthday: "2000-02-16",
   website: "www.deprakoso.com",
