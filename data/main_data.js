@@ -1,7 +1,7 @@
 var main_data = {
   title: "Portfolio - Raka D Prakoso",
   name: "Raka D Prakoso",
-  role: "Fullstack Developer, Web Developer, RPA Developer,Designer, Photographer",
+  role: "Fullstack Developer, Web Developer, RPA Developer,Designer",
   background_image: "assets/img/IMG_0513.JPG",
   social_media: [
     {
@@ -39,7 +39,7 @@ var main_data = {
     {
       major: "Animation",
       duration: "2015-2018",
-      institution: "Vocational High Schoold",
+      institution: "Vocational High School 2 Jepara",
     },
   ],
   jobs_experience: [
